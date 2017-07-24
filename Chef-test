@@ -19,8 +19,10 @@ node{
 
         }    
 
-       // stage('Check Knife vsphere'){
-       //                 
+       // stage('Check Knife vsphere')
+       
+       //{
+                        
        //     if (isUnix()) {
        //         sh "knife vsphere template list"
        //     } else {
