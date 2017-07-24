@@ -19,15 +19,15 @@ node{
 
         }    
 
-        stage('Check Knife vsphere'){
-                        
-            if (isUnix()) {
-                sh "knife vsphere template list"
-            } else {
-                bat(/knife vsphere template list/)
-            }
+       // stage('Check Knife vsphere'){
+       //                 
+       //     if (isUnix()) {
+       //         sh "knife vsphere template list"
+       //     } else {
+       //         bat(/knife vsphere template list/)
+       //     }
 
-        }      
+       // }      
 
                 
         // stage('Creat VM') {
