@@ -40,14 +40,14 @@ node('master') {
          }
         
         
-        // stage('Add VM as chef node') {
+        stage('Add VM as chef node') {
 
-        //     if (isUnix()) {
-        //         sh "knife bootstrap 10.118.41.150 --ssh-user root --ssh-password Password1 --node-name chefAutoMat150 --sudo --verbose"
-        //     } else {
-        //         bat(/knife bootstrap 10.118.41.150 --ssh-user root --ssh-password Password1 --node-name chefAutoMat150 --sudo --verbose/)
-        //     }
-        // }
+             if (isUnix()) {
+                 sh "knife bootstrap 10.118.41.150 --ssh-user root --ssh-password Password1 --node-name chefAutoMat150 --sudo --verbose"
+             } else {
+                 bat(/knife bootstrap 10.118.41.150 --ssh-user root --ssh-password Password1 --node-name chefAutoMat150 --sudo --verbose/)
+             }
+         }
 
         // stage('Install docker on VM') {
 
