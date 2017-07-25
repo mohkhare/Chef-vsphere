@@ -33,9 +33,9 @@ node('master') {
          stage('Creat VM') {
 
              if (isUnix()) {
-                 sh "knife vsphere vm clone chefAutoMat151 --template CentOsTemplate --start true --node-name chefAutoMat151 --resource-pool 'Compute/Chef_Test' --cspec CentOs_Chef --cips 10.118.40.151/24 --cdomain csa.local --verbose"
+                 sh "knife vsphere vm clone chefAutoMat152 --template CentOsTemplate --start true --node-name chefAutoMat152 --resource-pool 'Compute/Chef_Test' --cspec CentOs_Chef --cips 10.118.40.152/24 --cdomain csa.local --verbose"
              } else {
-                 bat(/knife vsphere vm clone chefAutoMat151 --template CentOsTemplate --start true --node-name chefAutoMat151 --resource-pool "Compute\/\Chef_Test" --cspec CentOs_Chef --cips 10.118.4o.151\/\24 --cdomain csa.local --verbose/)
+                 bat(/knife vsphere vm clone chefAutoMat152 --template CentOsTemplate --start true --node-name chefAutoMat152 --resource-pool "Compute\/\Chef_Test" --cspec CentOs_Chef --cips 10.118.40.152\/\24 --cdomain csa.local --verbose/)
              }
          }
         
@@ -43,9 +43,9 @@ node('master') {
         stage('Add VM as chef node') {
 
              if (isUnix()) {
-                 sh "knife bootstrap 10.118.40.151 --ssh-user root --ssh-password Password1 --node-name chefAutoMat151 --sudo --verbose"
+                 sh "knife bootstrap 10.118.40.152 --ssh-user root --ssh-password Password1 --node-name chefAutoMat152 --sudo --verbose"
              } else {
-                 bat(/knife bootstrap 10.118.40.151 --ssh-user root --ssh-password Password1 --node-name chefAutoMat151 --sudo --verbose/)
+                 bat(/knife bootstrap 10.118.40.152 --ssh-user root --ssh-password Password1 --node-name chefAutoMat152 --sudo --verbose/)
              }
          }
 
